@@ -203,6 +203,7 @@
             <input id="timelapse_button" type="button" class="btn btn-primary">
             <input id="md_button" type="button" class="btn btn-primary">
             <input id="halt_button" type="button" class="btn btn-danger">
+            <input id="feed_button" type="button" class="btn btn-success" value="feed">
          </div>
       </div>
       <div id="secondary-buttons" class="container-fluid text-center" <?php echo $displayStyle; ?> >

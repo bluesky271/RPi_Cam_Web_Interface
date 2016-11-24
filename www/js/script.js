@@ -210,6 +210,16 @@ ajax_status.onreadystatechange = function() {
       document.getElementById("halt_button").value = "stop camera";
       document.getElementById("halt_button").onclick = function() {send_cmd("ru 0");};
       document.getElementById("preview_select").disabled = false;
+//TODO learn this
+//        document.getElementById("feed_button").disabled = false;
+//        document.getElementById("feed_button").onclick = function() {
+//            // Need to do a POST on my REST API Service endpoint which is http://localhost:8000/feed
+//            open_feeder_cmd();
+//            sleep(10);
+//            close_feeder_cmd();
+//
+//        };
+
       halted = 0;
 	    updatePreview();
     }
@@ -448,6 +458,16 @@ else {
 
 function send_cmd (cmd) {
   ajax_cmd.open("GET","cmd_pipe.php?cmd=" + cmd,true);
+  ajax_cmd.send();
+}
+
+function open_feeder_cmd() {
+  ajax_cmd.open("GET","gpio.php?cmd=open",true);
+  ajax_cmd.send();
+}
+
+function close_feeder_cmd() {
+  ajax_cmd.open("GET","gpio.php?cmd=close",true);
   ajax_cmd.send();
 }
 
