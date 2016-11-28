@@ -1,3 +1,3 @@
 <?php
-  shell_exec('/home/pi/Pet_Feeder_Project/helloworld.py');
+  shell_exec('sudo python /home/pi/Pet_Feeder_Project/helloworld.py');
 ?>
