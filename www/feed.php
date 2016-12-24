@@ -1,3 +1,4 @@
 <?php
-  shell_exec('sudo python /home/pi/Pet_Feeder_Project/helloworld.py');
+$feed = shell_exec('/usr/bin/python /www/python/helloworld.py');
+echo $feed
 ?>
